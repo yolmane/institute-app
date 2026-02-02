@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление работниками АНО "Институт инноваций права"</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>АНО "Институт инноваций права"</h1>
+            <h2>Управление персоналом</h2>
+        </header>
+
+        <div id="message" class="message"></div>
+
+        <main>
+            <section class="form-section">
+                <h3>Добавить нового работника</h3>
+                <form id="addWorkerForm">
+                    <div class="form-group">
+                        <label for="fullName">Фамилия и инициалы:</label>
+                        <input type="text" id="fullName" required placeholder="Иванов И.И.">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="position">Должность:</label>
+                        <input type="text" id="position" required placeholder="Юрист-эксперт">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="salary">Зарплата (руб.):</label>
+                        <input type="number" id="salary" required min="0" placeholder="85000">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="startYear">Год начала работы:</label>
+                        <input type="number" id="startYear" required min="1900" max="2024" value="2020">
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Добавить работника</button>
+                </form>
+            </section>
+
+            <section class="filter-section">
+                <h3>Поиск по стажу</h3>
+                <div class="filter-controls">
+                    <input type="number" id="minExperience" min="0" placeholder="Минимальный стаж" value="5">
+                    <button id="filterExperience" class="btn-secondary">Найти</button>
+                </div>
+                <div id="filteredResults"></div>
+            </section>
+
+            <section class="stats-section">
+                <h3>Статистика</h3>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Всего работников:</span>
+                        <span id="totalWorkers" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Средняя зарплата:</span>
+                        <span id="avgSalary" class="stat-value">0</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="controls-section">
+                <h3>Управление данными</h3>
+                <div class="button-group">
+                    <button id="saveData" class="btn-action">Сохранить данные</button>
+                    <button id="loadTestData" class="btn-action">Загрузить тестовые данные</button>
+                    <button id="sortAsc" class="btn-action">Сортировать по возрастанию стажа</button>
+                    <button id="sortDesc" class="btn-action">Сортировать по убыванию стажа</button>
+                </div>
+            </section>
+
+            <section class="list-section">
+                <h3>Список работников</h3>
+                <div id="workersList" class="workers-list"></div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
