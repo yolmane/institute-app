@@ -26,7 +26,6 @@ worker-management/
 ├── package.json # Конфигурация npm
 └── README.md # Документация
 ```
-text
 
 ## Установка и запуск
 bash
@@ -41,3 +40,4 @@ npm start
 
 # Запуск тестов
 npm test
+
