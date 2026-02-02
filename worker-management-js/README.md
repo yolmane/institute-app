@@ -30,7 +30,7 @@ worker-management/
 ## Установка и запуск
 bash
 # Клонирование репозитория
-git clone 
+git clone https://github.com/yolmane/institute-app
 
 # Установка зависимостей
 npm install
@@ -40,4 +40,5 @@ npm start
 
 # Запуск тестов
 npm test
+
 
