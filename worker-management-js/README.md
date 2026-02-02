@@ -12,6 +12,7 @@
 6. Управление данными через интуитивный интерфейс
 
 ## Структура проекта
+```
 worker-management/
 ├── index.html # Основной HTML файл
 ├── js/
@@ -24,7 +25,7 @@ worker-management/
 │ └── worker.test.js # Тесты
 ├── package.json # Конфигурация npm
 └── README.md # Документация
-
+```
 text
 
 ## Установка и запуск
